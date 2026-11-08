@@ -1,13 +1,107 @@
-# OS generated files
+# ==========================================
+# 0. OS & Editor Artifacts
+# ==========================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+desktop.ini
 
-# Editor / IDE
 .vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
 *.swp
 *.swo
 *~
 
-# Logs & Environment
-*.log
+# ==========================================
+# 1. Credentials, Keys & Secrets (Critical)
+# ==========================================
+# Private & Public Keys
+*.pem
+*.key
+*.pub
+id_rsa*
+id_ecdsa*
+id_ed25519*
+known_hosts
+authorized_keys
+
+# Env & Token Files
 .env
+.env.*
+!.env.example
+*.env
+*.secrets
+secrets.*
+credentials
+credentials.json
+service-account*.json
+
+# ==========================================
+# 2. Cloud & Tool CLI Configurations
+# ==========================================
+# AWS CLI & LocalStack
+.aws/
+aws_access_key_id
+aws_secret_access_key
+.localstack/
+
+# OpenStack (Stage 5)
+clouds.yaml
+secure.yaml
+*openrc*
+*.openrc.sh
+
+# Kubernetes & Containers (Stage 6)
+kubeconfig
+*kubeconfig*
+*.kubeconfig
+kubeconfig.yaml
+.kube/
+helm/*.tgz
+
+# ==========================================
+# 3. Infrastructure as Code (IaC - Stage 4)
+# ==========================================
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Ansible
+*.retry
+.ansible/
+vault_password
+.vault_pass*
+*.vault
+
+# ==========================================
+# 4. Logs, Dumps & Network Captures (Stage 1, 2)
+# ==========================================
+*.log
+logs/
+*.pcap
+*.pcapng
+*.cap
+*.dump
