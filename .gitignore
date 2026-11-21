@@ -45,6 +45,8 @@ secrets.*
 credentials
 credentials.json
 service-account*.json
+.envrc
+.netrc
 
 # ==========================================
 # 2. Cloud & Tool CLI Configurations
@@ -69,6 +71,10 @@ kubeconfig.yaml
 .kube/
 helm/*.tgz
 
+#Pakage Manager Configs
+.npmrc
+.pypirc
+
 # ==========================================
 # 3. Infrastructure as Code (IaC - Stage 4)
 # ==========================================
@@ -88,6 +94,11 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+# Terraform Plan & Lock Information
+*.tfplan
+*.plan
+tfplan
+.terraform.tfstate.lock.info
 
 # Ansible
 *.retry
@@ -105,3 +116,8 @@ logs/
 *.pcapng
 *.cap
 *.dump
+
+
+
+
+
